@@ -40,15 +40,20 @@ Window {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+
                 theRectId.height =Qt.binding(() => {
                               return  theRectId.width * 2
                                              })
+
+
+                // theRectId.height = theRectId.width * 2;
             }
         }
 
 
     }
 
+    /*
     Rectangle {
           width: 300; height: 55
           color: Qt.application.active ? "white" : "lightgray"
@@ -58,4 +63,5 @@ Window {
               anchors.centerIn: parent
           }
       }
+      */
 }
