@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
 Item {
@@ -6,9 +6,15 @@ Item {
     ColumnLayout{
         anchors.horizontalCenter: parent.horizontalCenter
 
+        Rectangle {
+            width: 505
+            height: 20
+        }
+
         LoginHeader {
 
         }
+
         Rectangle {
             width: 505
             height: 44
@@ -56,6 +62,33 @@ Item {
             }
 
         }
+        Rectangle {
+            width: 505
+            height: 20
+        }
+
+        Row{
+            spacing: 30
+            anchors.horizontalCenter: parent.horizontalCenter
+            StyledButton {
+                color: "#6AAA64"
+                text: "Register"
+                onButtonClicked: {
+                    console.log("Styled button is clicked")
+                }
+            }
+            StyledButton {
+                color: "#000000"
+                text: "Register"
+                onButtonClicked: {
+                    console.log("Styled button is clicked")
+                }
+            }
+
+
+        }
+
+
     }
 
 

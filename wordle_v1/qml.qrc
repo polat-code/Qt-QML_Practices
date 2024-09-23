@@ -8,5 +8,6 @@
         <file>Game.qml</file>
         <file>LoginHeader.qml</file>
         <file>InputFieldWithLabel.qml</file>
+        <file>StyledButton.qml</file>
     </qresource>
 </RCC>
