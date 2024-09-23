@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainPageWithoutLogin.qml</file>
+        <file>MainPageWithLogin.qml</file>
+        <file>Login.qml</file>
+        <file>Register.qml</file>
+        <file>Game.qml</file>
+        <file>LoginHeader.qml</file>
+        <file>InputFieldWithLabel.qml</file>
+    </qresource>
+</RCC>
