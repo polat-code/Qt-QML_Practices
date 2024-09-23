@@ -6,10 +6,11 @@ Rectangle {
 
     property color buttonColor: buttonRectId.color;
     property string text: buttonTextId.text
+    property int customWidth: 224
     signal buttonClicked();
 
 
-    width: 224
+    width: buttonRectId.customWidth
     height: 50
     radius: 13
 
