@@ -16,6 +16,8 @@ Item {
 
         WordleGameHeader {}
 
+        MainPageIntroSentence{}
+
         Rectangle {
             width: parent.implicitWidth
             height: 30
@@ -40,6 +42,19 @@ Item {
                 text: "Register"
                 customWidth: 200
             }
+        }
+
+        Rectangle {
+            width: 505
+            height: 80
+        }
+
+
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "What is Wordle Game ?"
+            font.pointSize: 24
+
         }
 
 

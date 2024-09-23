@@ -11,5 +11,6 @@
         <file>StyledButton.qml</file>
         <file>WordleGameHeader.qml</file>
         <file>WordleLogo.qml</file>
+        <file>MainPageIntroSentence.qml</file>
     </qresource>
 </RCC>

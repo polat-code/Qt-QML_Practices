@@ -45,29 +45,10 @@ Rectangle {
            color: "#D1B036"  // Yellow color
        }
        Text {
-           text: "me Re"
+           text: "me"
            font.pixelSize: 48
            color: "#000000"  // Black color
        }
-       Text {
-           text: "g"
-           font.pixelSize: 48
-           color: "#6AAA64"   // Green color
-       }
-       Text {
-           text: "is"
-           font.pixelSize: 48
-           color: "#000000"  // Black color
-       }
-       Text {
-           text: "t"
-           font.pixelSize: 48
-           color: "#D1B036"  // Yellow color
-       }
-       Text {
-           text: "er"
-           font.pixelSize: 48
-           color: "#000000"  // Black color
-       }
+
     }
 }
