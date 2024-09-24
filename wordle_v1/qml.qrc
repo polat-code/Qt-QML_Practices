@@ -15,5 +15,6 @@
         <file>RegisterHeader.qml</file>
         <file>GameFeedbackMessage.qml</file>
         <file>GameRowsContainer.qml</file>
+        <file>GameBoxRow.qml</file>
     </qresource>
 </RCC>

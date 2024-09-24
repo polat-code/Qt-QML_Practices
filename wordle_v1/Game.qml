@@ -29,6 +29,9 @@ Item {
             textColor: 0 // or textColorsEnumTypeId.Success
         }
 
+        GameRowsContainer {
+
+        }
 
 
 
