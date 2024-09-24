@@ -1,4 +1,4 @@
-import QtQuick 2.12
+import QtQuick 2.14
 import QtQuick.Layouts 1.12
 
 Rectangle {
@@ -44,28 +44,27 @@ Rectangle {
            color: "#D1B036"  // Yellow color
        }
        Text {
-           text: "me"
-           font.pixelSize: 48
-           color: "#000000"  // Black color
-       }
-
-       Text {
-           text: " L"
-           font.pixelSize: 48
-           color: "#6AAA64"   // Green color
-       }
-       Text {
-           text: "o"
+           text: "me Re"
            font.pixelSize: 48
            color: "#000000"  // Black color
        }
        Text {
            text: "g"
            font.pixelSize: 48
+           color: "#6AAA64"   // Green color
+       }
+       Text {
+           text: "is"
+           font.pixelSize: 48
+           color: "#000000"  // Black color
+       }
+       Text {
+           text: "t"
+           font.pixelSize: 48
            color: "#D1B036"  // Yellow color
        }
        Text {
-           text: "in"
+           text: "er"
            font.pixelSize: 48
            color: "#000000"  // Black color
        }

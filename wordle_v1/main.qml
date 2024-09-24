@@ -8,14 +8,24 @@ Window {
     height: Screen.height
     title: qsTr("Hello World")
 
-    /*
-    Login {
+
+    MainPageWithLogin {
 
     }
-    */
 
+    /*
     MainPageWithoutLogin {
 
     }
 
+
+    Register {
+
+    }
+
+    Login {
+
+    }
+
+    */
 }

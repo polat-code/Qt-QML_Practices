@@ -12,5 +12,6 @@
         <file>WordleGameHeader.qml</file>
         <file>WordleLogo.qml</file>
         <file>MainPageIntroSentence.qml</file>
+        <file>RegisterHeader.qml</file>
     </qresource>
 </RCC>
