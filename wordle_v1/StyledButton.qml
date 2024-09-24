@@ -25,9 +25,22 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
+        hoverEnabled: true
         onClicked: {
-            buttonClicked();
+            buttonRectId.buttonClicked();
         }
+        onEntered: {
+            buttonTextId.color = buttonColor
+            buttonRectId.border.color = buttonColor
+            buttonRectId.border.width = 2
+            buttonRectId.color = "white"
+        }
+
+        onExited: {
+            buttonRectId.color = buttonTextId.color
+            buttonTextId.color = "white"
+        }
+
     }
 
 }
