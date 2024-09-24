@@ -151,38 +151,42 @@ Row {
 
        }
     }
-    Rectangle{
-       id: gameBox5Id
-       width: 75
-       height: 75
-       color: "#3A3A3C"
-       border.color: "#3A3A3C"
-       border.width: 2
-       radius: 10
-       TextInput {
-           id: gameBox5LetterId
-           maximumLength: 1
-           color: "white"
-           font.pointSize: 40
-           width: 75
-           height: 75
-           focus: true
-           horizontalAlignment: TextInput.AlignHCenter
-           verticalAlignment: TextInput.AlignVCenter
-           onTextChanged: {
-               gameBox5LetterId.text = gameBox5LetterId.text.toUpperCase()
+    Rectangle {
+        id: gameBox5Id
+        width: 75
+        height: 75
+        color: "#3A3A3C"
+        border.color: "#3A3A3C"
+        border.width: 2
+        radius: 10
+
+        TextInput {
+            id: gameBox5LetterId
+            maximumLength: 1
+            color: "white"
+            font.pointSize: 40
+            width: 75
+            height: 75
+            focus: true
+            horizontalAlignment: TextInput.AlignHCenter
+            verticalAlignment: TextInput.AlignVCenter
+
+            onTextChanged: {
+                gameBox5LetterId.text = gameBox5LetterId.text.toUpperCase()
                 letter5 = gameBox5LetterId.text
-           }
-           MouseArea {
-               anchors.fill: parent
+            }
 
-               onClicked: {
-                   gameBox5LetterId.focus = isBoxClickable && true
-               }
-           }
+            MouseArea {
+                anchors.fill: parent
 
-       }
+                onClicked: {
+                    gameBox5LetterId.focus = isBoxClickable && true
+                }
+            }
+        }
     }
+
+
     Rectangle{
        id: gameRowInfoId
        width: gameRowInfoTextId.implicitWidth
@@ -192,6 +196,18 @@ Row {
 
        Row {
            id: gameRowInfoTextId
+           anchors.verticalCenter: parent.verticalCenter
+
+
+           StyledButton {
+               color: "#6AAA64"
+               text: "Check"
+               onButtonClicked: {
+                   console.log("Styled button is clicked")
+               }
+               customWidth: 90
+
+           }
 
            // Margin
            Rectangle{
@@ -199,20 +215,31 @@ Row {
                width: 10
            }
 
+            Row {
+                anchors.verticalCenter: parent.verticalCenter
+                Text {
+                    text: qsTr("To write a letter in a box,  ")
+                    font.pointSize: 16
+                }
+                Text {
+                    text: qsTr("Click")
+                     font.bold: true
+                     font.pointSize: 16
+                     font.underline: true
+                }
+                Text {
+                    text: qsTr(" the box")
+                    font.pointSize: 16
+                }
 
-           Text {
-               text: qsTr("To write a letter in a box, ")
-               font.pointSize: 16
-           }
-           Text {
-               text: qsTr(" Click")
-                font.bold: true
-                font.pointSize: 16
-           }
-           Text {
-               text: qsTr(" the box")
-               font.pointSize: 16
-           }
+            }
+
+
+
+
+
+
+
        }
 
 
