@@ -13,5 +13,7 @@
         <file>WordleLogo.qml</file>
         <file>MainPageIntroSentence.qml</file>
         <file>RegisterHeader.qml</file>
+        <file>GameFeedbackMessage.qml</file>
+        <file>GameRowsContainer.qml</file>
     </qresource>
 </RCC>
