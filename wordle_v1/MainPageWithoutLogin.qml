@@ -1,7 +1,10 @@
 import QtQuick 2.14
+import QtQuick.Controls 2.12
 
-Item {
+Page {
     anchors.fill: parent
+    signal requestPageChange(string page);
+
     Column{
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -31,7 +34,7 @@ Item {
                 text: "Play without login"
                 customWidth: 200
                 onButtonClicked: {
-                    //console.log("hello")
+                    requestPageChange("gamePage");
                 }
 
             }
@@ -39,11 +42,19 @@ Item {
                 color: "#D1B036"
                 text: "Login"
                 customWidth: 200
+                onButtonClicked: {
+                    //console.log("hello")
+                    requestPageChange("loginPage")
+                }
             }
             StyledButton {
                 color: "#000000"
                 text: "Register"
                 customWidth: 200
+                onButtonClicked: {
+                    //console.log("hello")
+                    requestPageChange("registerPage")
+                }
             }
         }
 

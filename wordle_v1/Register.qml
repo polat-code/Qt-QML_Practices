@@ -1,9 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
-Item {
+import QtQuick.Controls 2.12
+Page {
 
     anchors.fill: parent
-    ColumnLayout{
+    signal requestPageChange(string page);
+    Column{
         anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle {
@@ -81,7 +83,7 @@ Item {
                 color: "#000000"
                 text: "Back to Main Page"
                 onButtonClicked: {
-                    console.log("Styled button is clicked")
+                    requestPageChange("mainPageWithoutLogin")
                 }
             }
 

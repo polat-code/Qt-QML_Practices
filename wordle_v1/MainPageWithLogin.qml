@@ -1,7 +1,9 @@
 import QtQuick 2.14
+import QtQuick.Controls 2.12
 
-Item {
+Page {
     anchors.fill: parent
+    signal requestPageChange(string page);
     Column{
         anchors.horizontalCenter: parent.horizontalCenter
 

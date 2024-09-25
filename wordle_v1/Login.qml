@@ -1,10 +1,12 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.12
 
-Item {
+Page {
 
     anchors.fill: parent
-    ColumnLayout{
+    signal requestPageChange(string page);
+    Column{
         anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle {
@@ -34,6 +36,7 @@ Item {
                 //console.log("Surname : " + text)
             }
 
+
         }
         Rectangle {
             width: 505
@@ -47,14 +50,14 @@ Item {
                 color: "#6AAA64"
                 text: "Login"
                 onButtonClicked: {
-                    console.log("Styled button is clicked")
+                    //loader.push("")
                 }
             }
             StyledButton {
                 color: "#000000"
                 text: "Back to Main Page"
                 onButtonClicked: {
-                    console.log("Styled button is clicked")
+                   requestPageChange("mainPageWithoutLogin");
                 }
             }
 
