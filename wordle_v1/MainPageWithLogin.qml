@@ -42,7 +42,7 @@ Page {
                 text: "Play Wordle Game"
                 customWidth: 200
                 onButtonClicked: {
-                    //console.log("hello")
+                    requestPageChange("gamePage");
                 }
             }
         }

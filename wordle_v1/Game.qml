@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 Page {
-
+    id: gamePageId
     anchors.fill: parent
     signal requestPageChange(string page);
     Column{
@@ -36,4 +36,9 @@ Page {
         }
 
     }
+
+    Component.onCompleted: {
+        gamePageId.forceActiveFocus(); // Set focus to the email input field when the page is loaded
+    }
+
 }

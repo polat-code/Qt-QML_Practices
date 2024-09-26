@@ -64,10 +64,10 @@ QString DatabaseManager::findNameAndSurnameByEmailAndPassword(const QString &ema
             QString surname = query.value(2).toString(); // Assuming 'surname' is in the third column
 
             // Print or use the values as needed
-            qDebug() << "User found:";
-            qDebug() << "ID:" << id;
-            qDebug() << "Name:" << name;
-            qDebug() << "Surname:" << surname;
+            //qDebug() << "User found:";
+            //qDebug() << "ID:" << id;
+            //qDebug() << "Name:" << name;
+            //qDebug() << "Surname:" << surname;
             return name + " " + surname;
         } else {
             // No user found with the given email and password
