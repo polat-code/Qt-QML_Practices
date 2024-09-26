@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
     //dbManager.addUser("Özgürhan","Polat","ozgurhan.45@gmail.com","05531521381","12345");
 
-    //dbManager.findNameAndSurnameByEmailAndPassword("ozgurhan.45@gmail.com","12345");
+    //QString result =  dbManager.findNameAndSurnameByEmailAndPassword("ozgurhan.45@gmail.com","12345");
 
 
     QQmlApplicationEngine engine;

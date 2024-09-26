@@ -1,13 +1,18 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
+// login.qml
 
 Page {
 
     anchors.fill: parent
     signal requestPageChange(string page);
-    property bool isFocusField : true;
-    Column{
+
+    property string email: ""
+    property string password: ""
+    property bool isNotificationVisible: false;
+
+    Column {
         anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle {
@@ -15,64 +20,83 @@ Page {
             height: 200
         }
 
-        LoginHeader {
-
-        }
+        LoginHeader {}
 
         Rectangle {
             width: 505
             height: 44
         }
 
-        InputFieldWithLabel{
+        InputFieldWithLabel {
             id: emailInputFieldInLoginId
             labelName: "Email"
-            isFocus: isFocusField
+            isFocus: true
             onGetTextInputResult: {
-                //console.log("Email : " + text)
+                email = text;
             }
         }
-        InputFieldWithLabel{
+
+        InputFieldWithLabel {
+            id: passwordInputFieldInLoginId
             labelName: "Password"
+            isFocus: false
             onGetTextInputResult: {
-                //console.log("Surname : " + text)
+                password = text;
             }
-
-
         }
+
         Rectangle {
             width: 505
-            height: 20
+            height: 30
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Text {
+                id: notificationTextId
+                text: ""
+                visible: isNotificationVisible
+                color: "red"
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                font.pointSize: 16
+            }
         }
 
-        Row{
+        Row {
             spacing: 30
             anchors.horizontalCenter: parent.horizontalCenter
+
             StyledButton {
                 color: "#6AAA64"
                 text: "Login"
                 onButtonClicked: {
-                    //loader.push("")
+                    passwordInputFieldInLoginId.isFocus = false;
+                    emailInputFieldInLoginId.isFocus = false;
+                    console.log("Email in login.qml : " + email);
+                    console.log("Password in login.qml : " + password);
+
+                    var nameAndSurname = UserManager.loginUser(email, password);
+                    if (nameAndSurname === "") {
+                        isNotificationVisible = true;
+                        notificationTextId.text = "There is no such user!";
+                    } else {
+                        isNotificationVisible = false;
+                        requestPageChange("mainPageWithLogin");
+                    }
                 }
             }
+
             StyledButton {
                 color: "#000000"
                 text: "Back to Main Page"
                 onButtonClicked: {
-                   requestPageChange("mainPageWithoutLogin");
+                    requestPageChange("mainPageWithoutLogin");
                 }
             }
-
-
         }
-
-
     }
 
     Component.onCompleted: {
         emailInputFieldInLoginId.forceActiveFocus(); // Set focus to the email input field when the page is loaded
     }
-
-
-
 }
+

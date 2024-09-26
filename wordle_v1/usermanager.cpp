@@ -16,7 +16,7 @@ bool UserManager::registerUser(const QString &name, const QString &surname, cons
 
 QString UserManager::loginUser(const QString &email, const QString &password)
 {
-    return databaseManager.findNameAndSurnameByEmailAndPassword(email,password);
+    return  databaseManager.findNameAndSurnameByEmailAndPassword(email,password);
 }
 
 
