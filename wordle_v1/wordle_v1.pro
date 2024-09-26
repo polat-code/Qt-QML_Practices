@@ -16,7 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         databasemanager.cpp \
-        main.cpp
+        main.cpp \
+        usermanager.cpp
 
 RESOURCES += qml.qrc \
     resource.qrc
@@ -33,4 +34,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    databasemanager.h
+    databasemanager.h \
+    usermanager.h
