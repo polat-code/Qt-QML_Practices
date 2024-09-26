@@ -6,6 +6,7 @@ Page {
 
     anchors.fill: parent
     signal requestPageChange(string page);
+    property bool isFocusField : true;
     Column{
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -24,8 +25,9 @@ Page {
         }
 
         InputFieldWithLabel{
+            id: emailInputFieldInLoginId
             labelName: "Email"
-            isFocus: true
+            isFocus: isFocusField
             onGetTextInputResult: {
                 //console.log("Email : " + text)
             }
@@ -65,6 +67,10 @@ Page {
         }
 
 
+    }
+
+    Component.onCompleted: {
+        emailInputFieldInLoginId.forceActiveFocus(); // Set focus to the email input field when the page is loaded
     }
 
 

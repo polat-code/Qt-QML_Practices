@@ -10,8 +10,8 @@ class UserManager : public QObject
 public:
     explicit UserManager(DatabaseManager &dbManager);
 
-    bool registerUser(const QString &name,const QString &surname,const QString &email,const QString &telephone,const QString &password);
-    QString loginUser(const QString &email, const QString &password);
+    Q_INVOKABLE bool registerUser(const QString &name,const QString &surname,const QString &email,const QString &telephone,const QString &password);
+    Q_INVOKABLE QString loginUser(const QString &email, const QString &password);
 signals:
 
 

@@ -8,12 +8,12 @@ Rectangle {
     Column {
         anchors.horizontalCenter: parent.horizontalCenter
         GameBoxRow {
-            isInfoVisible: false
-            isBoxClickable: false
-        }
-        GameBoxRow {
             isInfoVisible: true
             isBoxClickable: true
+        }
+        GameBoxRow {
+            isInfoVisible: false
+            isBoxClickable: false
         }
         GameBoxRow {
             isInfoVisible: false

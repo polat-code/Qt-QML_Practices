@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     UserManager userManager(dbManager);
 
     //userManager.registerUser("Özgürhan","Polat","ozgurhan.1@gmail.com","05531521381","12345");
-    qDebug() << userManager.loginUser("ozgurhan.1@gmail.com","12345");
+    //qDebug() << userManager.loginUser("ozgurhan.1@gmail.com","12345");
 
     //dbManager.addUser("Özgürhan","Polat","ozgurhan.45@gmail.com","05531521381","12345");
 

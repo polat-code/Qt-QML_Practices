@@ -42,7 +42,9 @@ Window {
             id: loginPage
             Login {
                 onRequestPageChange: switchToPage(page)
+                isFocusField : true;
             }
+
         }
 
         Component {

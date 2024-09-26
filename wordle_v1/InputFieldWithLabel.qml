@@ -31,7 +31,7 @@ Rectangle {
         radius: 10
 
 
-            TextInput {
+            TextEdit {
                 id: textInputId
                 font.pointSize: 20
                 anchors.horizontalCenter: parent.horizontalCenter
