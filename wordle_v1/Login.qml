@@ -7,6 +7,7 @@ Page {
 
     anchors.fill: parent
     signal requestPageChange(string page);
+    signal sendFullName(string fullName);
 
     property string email: ""
     property string password: ""
@@ -80,6 +81,7 @@ Page {
                         notificationTextId.text = "There is no such user!";
                     } else {
                         isNotificationVisible = false;
+                        sendFullName(nameAndSurname);
                         requestPageChange("mainPageWithLogin");
                     }
                 }

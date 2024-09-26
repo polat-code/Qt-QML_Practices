@@ -4,6 +4,9 @@ import QtQuick.Controls 2.12
 Page {
     anchors.fill: parent
     signal requestPageChange(string page);
+
+    property string userFullName: ""
+
     Column{
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -27,7 +30,7 @@ Page {
                 id: welcomeTextId
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                text: "Welcome Özgürhan Polat"
+                text: "Welcome " + userFullName
                 font.pointSize: 20
             }
         }

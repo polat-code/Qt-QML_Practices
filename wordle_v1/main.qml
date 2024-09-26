@@ -9,10 +9,15 @@ Window {
     height: Screen.height
     title: qsTr("Wordle Game")
 
+
+
+
     Loader {
             id: pageLoader
             anchors.fill: parent
             sourceComponent: mainPageWithoutLogin
+
+            property string userNameAndSurname: ""
         }
 
         // Handle signals from pages
@@ -30,6 +35,9 @@ Window {
             }
         }
 
+
+
+
         // Load each page dynamically as a Component
         Component {
             id: mainPageWithoutLogin
@@ -42,7 +50,9 @@ Window {
             id: loginPage
             Login {
                 onRequestPageChange: switchToPage(page)
-
+                onSendFullName: {
+                    userNameAndSurname = fullName;
+                }
             }
 
         }
@@ -58,6 +68,8 @@ Window {
             id: mainPageWithLogin
             MainPageWithLogin {
                 onRequestPageChange: switchToPage(page)
+                userFullName :userNameAndSurname
+
             }
         }
 
@@ -67,8 +79,6 @@ Window {
                 onRequestPageChange: switchToPage(page)
             }
         }
-
-
 
 
 
@@ -95,8 +105,5 @@ Window {
 
     */
 
-    StackView {
-        id: loader
-        anchors.fill: parent
-    }
+
 }
