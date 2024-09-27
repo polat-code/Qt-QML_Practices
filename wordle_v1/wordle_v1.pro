@@ -16,8 +16,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         databasemanager.cpp \
+        gamemanager.cpp \
+        letterwithcolor.cpp \
         main.cpp \
-        usermanager.cpp
+        usermanager.cpp \
+        word.cpp
 
 RESOURCES += qml.qrc \
     resource.qrc
@@ -35,4 +38,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     databasemanager.h \
-    usermanager.h
+    gamemanager.h \
+    letterwithcolor.h \
+    usermanager.h \
+    word.h
