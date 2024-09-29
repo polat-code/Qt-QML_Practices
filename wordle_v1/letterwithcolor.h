@@ -18,6 +18,7 @@ public:
     explicit LetterWithColor(const QString &letter, BACKGROUND_COLOR color); // Pass by value
 
     Q_ENUM(BACKGROUND_COLOR);
+    Q_PROPERTY(BACKGROUND_COLOR color READ color WRITE setColor NOTIFY colorChanged)
 
     QString getLetter() const;
     void setLetter(const QString &value);

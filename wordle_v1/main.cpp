@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     qDebug() << "1: "<< searchWord->getWord()[0]->getLetter() << " 3: " << searchWord->getWord()[3]->getLetter() ;
     //qDebug() << gameManager.checkWordWhetherInWordList("game");
     Word* userWord = gameManager.checkSimilarity("eager");
-    qDebug() << userWord->getWord()[4]->getColor();
+    qDebug() << userWord->getWord()[1]->getColor();
     qDebug() << gameManager.checkGameIsOverOrNoT(userWord);
 
 

@@ -92,7 +92,7 @@ bool GameManager::checkGameIsOverOrNoT(Word* userColoredWord){
 
     for(int i = 0; i < userColoredWord->getWord().length(); i++) {
         qDebug() << static_cast<int>(userColoredWord->getWord()[i]->getColor());
-        if(static_cast<int>(userColoredWord->getWord()[i]->getColor()) != 1 ) { //1 means LetterWithColor::BACKGROUND_COLOR::GREEN in enum
+        if(static_cast<int>(userColoredWord->getWord()[i]->getColor()) != 1 ) { //1 means LetterWithColor::BACKGROUND_COLOR::GREEN
             return false;
         }
     }
